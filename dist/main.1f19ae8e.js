@@ -126,24 +126,8 @@ var imageDataFragment;
 autoSetCanvasSize(canvas);
 listenToUser(canvas);
 
-toggle.onclick = function (e) {
-  if (e.target.matches(".open")) {
-    toggleClose.classList.add("show");
-    toggleOpen.classList.remove("show");
-    tools.style.display = "none";
-  } else {
-    toggleClose.classList.remove("show");
-    toggleOpen.classList.add("show");
-    tools.style.display = "block";
-  }
-};
-
 clear.onclick = function () {
   context.clearRect(0, 0, canvas.width, canvas.height);
-  canvasHistory = [];
-  step = -1;
-  back.classList.remove("active");
-  go.classList.remove("active");
 };
 
 download.onclick = function () {
@@ -387,7 +371,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57779" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58430" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

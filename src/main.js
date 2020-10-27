@@ -8,24 +8,7 @@ autoSetCanvasSize(canvas);
 
 listenToUser(canvas);
 
-toggle.onclick = function(e) {
-  if (e.target.matches(".open")) {
-    document.querySelector("#toggleClose").classList.add("show");
-    document.querySelector("#toggleOpen").classList.remove("show");
-    tools.style.display = "none";
-  } else {
-    document.querySelector("#toggleClose").classList.remove("show");
-    document.querySelector("#toggleOpen").classList.add("show");
-    tools.style.display = "block";
-  }
-};
-clear.onclick = function() {
-  context.clearRect(0, 0, canvas.width, canvas.height);
-  canvasHistory = [];
-  step = -1;
-  back.classList.remove("active");
-  go.classList.remove("active");
-};
+clear.onclick = function() {context.clearRect(0, 0, canvas.width, canvas.height);};
 download.onclick = function() {
   var compositeOperation = context.globalCompositeOperation;
   context.globalCompositeOperation = "destination-over";
