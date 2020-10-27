@@ -10,12 +10,12 @@ listenToUser(canvas);
 
 toggle.onclick = function(e) {
   if (e.target.matches(".open")) {
-    toggleClose.classList.add("show");
-    toggleOpen.classList.remove("show");
+    document.querySelector("#toggleClose").classList.add("show");
+    document.querySelector("#toggleOpen").classList.remove("show");
     tools.style.display = "none";
   } else {
-    toggleClose.classList.remove("show");
-    toggleOpen.classList.add("show");
+    document.querySelector("#toggleClose").classList.remove("show");
+    document.querySelector("#toggleOpen").classList.add("show");
     tools.style.display = "block";
   }
 };
