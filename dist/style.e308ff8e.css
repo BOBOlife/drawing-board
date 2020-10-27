@@ -1,0 +1,192 @@
+ul,
+ol {
+  list-style: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  white-space: nowrap;
+  cursor: pointer;
+  border: none;
+}
+
+svg {
+  transition: all 0.2s;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+#tools {
+  display: block;
+}
+
+#toggle {
+  position: fixed;
+  padding-left: 5px;
+  top: 0;
+  left: 0;
+}
+
+#toggle svg {
+  display: none;
+}
+
+#toggle svg.show {
+  width: 2.5em;
+  height: 2.5em;
+  display: block;
+}
+
+#canvas {
+  display: block;
+  background: white;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.icon {
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+body {
+  overflow: hidden;
+  background-color: blanchedalmond;
+}
+
+.svg,
+.button {
+  position: fixed;
+  padding: 10px;
+}
+.svg {
+  top: 0;
+}
+.button {
+  top: 40px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.button button {
+  margin-bottom: 6px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.button #clear {
+  background-color: #f56c6c;
+}
+
+.button #download {
+  background-color: deepskyblue;
+}
+
+.button button svg {
+  width: 1.2em;
+  height: 1.2em;
+}
+
+.svg svg.active {
+  fill: green;
+  transform: scale(1.2);
+}
+
+.svg {
+  right: 0;
+}
+
+.svg svg {
+  width: 1.8em;
+  height: 1.8em;
+}
+
+.colors {
+  position: fixed;
+  top: calc(46vh - 95px);
+  right: 10px;
+}
+
+.colors > li {
+  width: 20px;
+  height: 20px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+  margin: 10px;
+  border-radius: 50%;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.colors > li.black {
+  background: black;
+}
+
+.colors > li.red {
+  background: red;
+}
+
+.colors > li.green {
+  background: green;
+}
+
+.colors > li.blue {
+  background: blue;
+}
+
+.colors > li.active,
+.sizes > li.active {
+  transform: scale(1.2);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 1);
+}
+.colors #currentColor {
+  display: inline-block;
+  box-sizing: border-box;
+  height: 40px;
+  width: 40px;
+  padding: 4px;
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+  font-size: 0;
+  position: relative;
+  cursor: pointer;
+}
+
+.sizes {
+  position: fixed;
+  top: 5%;
+  right: 50px;
+}
+
+.sizes #range {
+  transform-origin: 85px 67px;
+  transform: rotate(90deg);
+  cursor: pointer;
+  -webkit-appearance: none; /*去除默认样式*/
+  background-color: #ebeff4;
+  padding: 0;
+  height: 8px;
+  border: none;
+}
+.sizes #range::-webkit-slider-thumb {
+  -webkit-appearance: none; /*去除默认样式*/
+  cursor: default;
+  top: 0;
+  height: 20px;
+  width: 20px;
+  transform: translateY(0px);
+  background: #fff;
+  border-radius: 15px;
+  border: 5px solid deepskyblue;
+}
+
+/*# sourceMappingURL=/style.e308ff8e.css.map */
